@@ -10,7 +10,8 @@ with pkgs; [
 
   cachix
 
-  discord
+  #discord
+  (pkgs.discord.override { withMoonlight = true; })
 
   #jetbrains
   jetbrains.webstorm

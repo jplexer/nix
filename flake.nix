@@ -13,11 +13,6 @@
         # to have it up-to-date or simply don't specify the nixpkgs input
         inputs.nixpkgs.follows = "nixpkgs";
       };
-
-    moonlight = {
-      url = "github:moonlight-mod/moonlight"; # Add `/develop` to the flake URL to use nightly.
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

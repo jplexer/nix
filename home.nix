@@ -3,7 +3,6 @@
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
-    inputs.moonlight.homeModules.default
   ];
 
   home.username = "jplexer";
@@ -34,10 +33,6 @@
         DisableTelemetry = true;
         # find more options here: https://mozilla.github.io/policy-templates/
       };
-  };
-
-  programs.moonlight-mod = {
-    enable = true;
   };
 
   # This value determines the home Manager release that your
