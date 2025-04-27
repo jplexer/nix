@@ -69,6 +69,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  nix.settings.auto-optimise-store = true;
+
   # Install firefox.
   #programs.firefox.enable = true;
 
