@@ -35,6 +35,16 @@
       };
   };
 
+  xdg.configFile."containers/policy.json".text = ''
+     {
+       "default": [{"type": "insecureAcceptAnything"}]
+     }
+   '';
+
+   xdg.configFile."containers/registries.conf".text = ''
+     unqualified-search-registries = ["docker.io"]
+   '';
+
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
