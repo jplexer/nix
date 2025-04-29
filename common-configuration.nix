@@ -70,6 +70,7 @@
   };
 
   nix.settings.auto-optimise-store = true;
+  nix.settings.trusted-users = [ "root" "jplexer" ];
 
   # Install firefox.
   #programs.firefox.enable = true;
@@ -88,8 +89,6 @@
       dates = "weekly";
       options = "--delete-older-than 1w";
   };
-
-  nix.settings.auto-optimise-store = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
