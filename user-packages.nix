@@ -8,6 +8,10 @@ with pkgs; [
   termius
   jamesdsp
 
+  ngrok
+  podman
+  podman-compose
+  distrobox
   cachix
 
   #discord
