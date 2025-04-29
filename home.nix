@@ -24,6 +24,13 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
+    bashrcExtra = ''
+      if [ -e /run/.containerenv ] || [ -e /.dockerenv ]; then
+        PATH=/home/jplexer/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/bin:$PATH
+        export PATH
+        source /home/jplexer/emsdk/emsdk_env.sh
+      fi
+    '';
   };
 
   programs.zen-browser = {
