@@ -1,5 +1,7 @@
 { pkgs, ... }:
 with pkgs; [
+  dotnet-sdk
+
   beeper
   calibre
   cinny
