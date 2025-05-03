@@ -72,6 +72,14 @@
   nix.settings.auto-optimise-store = true;
   nix.settings.trusted-users = [ "root" "jplexer" ];
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Include required libraries for .NET/Aspire
+    zlib
+    openssl
+    icu
+  ];
+
   # Install firefox.
   #programs.firefox.enable = true;
 
