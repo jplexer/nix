@@ -9,7 +9,9 @@ with pkgs; [
   obs-studio
   termius
   jamesdsp
+
   pnpm
+  nodejs
 
   ngrok
   podman
