@@ -1,6 +1,6 @@
 { pkgs, ... }:
 with pkgs; [
-  dotnet-sdk
+  dotnet-sdk_9
 
   beeper
   calibre
