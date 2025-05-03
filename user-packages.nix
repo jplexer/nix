@@ -12,6 +12,7 @@ with pkgs; [
 
   pnpm
   nodejs
+  fontconfig
 
   ngrok
   podman
