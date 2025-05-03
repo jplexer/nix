@@ -1,5 +1,9 @@
 { pkgs, ... }:
 with pkgs; [
+  (pkgs.writeShellScriptBin "dotnet-distrobox" ''
+        #!/usr/bin/env bash
+        exec distrobox enter dotnetbox -- dotnet "$@"
+      '')
   dotnet-sdk_9
 
   beeper
