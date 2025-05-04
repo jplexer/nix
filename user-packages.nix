@@ -6,6 +6,7 @@ with pkgs; [
       '')
   dotnet-sdk_9
   go
+  atproto-goat
 
   beeper
   calibre
