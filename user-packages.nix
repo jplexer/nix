@@ -5,6 +5,7 @@ with pkgs; [
         exec distrobox enter dotnetbox -- dotnet "$@"
       '')
   dotnet-sdk_9
+  go
 
   beeper
   calibre
