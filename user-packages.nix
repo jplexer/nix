@@ -5,6 +5,7 @@ with pkgs; [
         exec distrobox enter dotnetbox -- dotnet "$@"
       '')
   dotnet-sdk_9
+  dotnet-runtime_9
   go
   atproto-goat
 
