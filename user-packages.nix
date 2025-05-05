@@ -9,6 +9,7 @@ with pkgs; [
   go
   atproto-goat
   ffmpeg
+  uv
 
   beeper
   calibre
