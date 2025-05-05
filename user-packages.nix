@@ -8,6 +8,7 @@ with pkgs; [
   dotnet-runtime_9
   go
   atproto-goat
+  ffmpeg
 
   beeper
   calibre
