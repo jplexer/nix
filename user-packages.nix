@@ -10,6 +10,7 @@ with pkgs; [
   atproto-goat
   ffmpeg
   uv
+  bun
 
   beeper
   calibre
