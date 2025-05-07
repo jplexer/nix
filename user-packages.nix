@@ -11,6 +11,7 @@ with pkgs; [
   ffmpeg
   uv
   bun
+  cura
 
   beeper
   calibre
