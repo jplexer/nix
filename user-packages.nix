@@ -12,6 +12,7 @@ with pkgs; [
   uv
   bun
   cura-appimage
+  android-studio
 
   beeper
   calibre
