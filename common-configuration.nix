@@ -36,7 +36,10 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  services.wivrn.openFirewall = true;
+  services.wivrn = {
+    enable = true;
+    openFirewall = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
