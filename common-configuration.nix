@@ -8,6 +8,8 @@
 
   networking.networkmanager.enable = true;
 
+  services.flatpak.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
