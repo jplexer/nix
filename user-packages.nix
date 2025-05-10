@@ -15,7 +15,6 @@ with pkgs; [
   android-studio
   prismlauncher
 
-  slimevr
   temurin-jre-bin-23
   avahi
 
