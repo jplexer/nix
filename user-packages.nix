@@ -17,6 +17,7 @@ with pkgs; [
 
   slimevr
   temurin-jre-bin-23
+  avahi
 
   beeper
   calibre
