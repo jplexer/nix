@@ -19,6 +19,7 @@ with pkgs; [
   temurin-jre-bin-23
   avahi
   wlx-overlay-s
+  opencomposite
 
   beeper
   calibre
