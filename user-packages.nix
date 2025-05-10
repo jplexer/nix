@@ -13,6 +13,7 @@ with pkgs; [
   bun
   cura-appimage
   android-studio
+  prismlauncher
 
   beeper
   calibre
