@@ -71,7 +71,20 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  services.avahi.enable = true;
+  services.avahi = {
+    enable = true;
+
+    publish = {
+      enable      = true;        # allow Avahi to publish your host and services[3]
+      addresses   = true;
+      workstation = true;
+    };
+
+    extraConfig = ''
+      [server]
+      disable-user-service-publishing=no
+    '';
+  };
 
   nix.settings.auto-optimise-store = true;
   nix.settings.trusted-users = [ "root" "jplexer" ];
