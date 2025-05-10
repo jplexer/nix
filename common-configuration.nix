@@ -75,15 +75,11 @@
     enable = true;
 
     publish = {
-      enable      = true;        # allow Avahi to publish your host and services[3]
-      addresses   = true;
-      workstation = true;
+      enable        = true;    # advertise host/services
+      addresses     = true;    # publish IPv4/IPv6 addresses
+      workstation   = true;    # advertise as workstation
+      userServices  = true;    # allow user-level service publishing[2]
     };
-
-    extraConfig = ''
-      [publish]
-      disable-user-service-publishing=no
-    '';
   };
 
   nix.settings.auto-optimise-store = true;
