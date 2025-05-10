@@ -71,6 +71,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  services.avahi.enable = true;
+
   nix.settings.auto-optimise-store = true;
   nix.settings.trusted-users = [ "root" "jplexer" ];
 
