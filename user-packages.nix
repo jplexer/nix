@@ -16,6 +16,7 @@ with pkgs; [
   prismlauncher
 
   slimevr
+  temurin-jre-bin-23
 
   beeper
   calibre
