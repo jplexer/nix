@@ -15,6 +15,8 @@ with pkgs; [
   android-studio
   prismlauncher
 
+  slimevr
+
   beeper
   calibre
   cinny
