@@ -81,7 +81,7 @@
     };
 
     extraConfig = ''
-      [server]
+      [publish]
       disable-user-service-publishing=no
     '';
   };
