@@ -39,6 +39,7 @@
   services.wivrn = {
     enable = true;
     openFirewall = true;
+    defaultRuntime = true;
   };
 
   # Configure keymap in X11

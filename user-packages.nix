@@ -18,6 +18,7 @@ with pkgs; [
   slimevr
   temurin-jre-bin-23
   avahi
+  wlx-overlay-s
 
   beeper
   calibre
