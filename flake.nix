@@ -27,7 +27,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.jplexer = ./home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};
-              home-manager.backupFileExtension = true;
+              home-manager.backupFileExtension = "backup";
             }
       ];
     };
