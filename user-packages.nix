@@ -14,7 +14,7 @@ with pkgs; [
   cura-appimage
   android-studio
   prismlauncher
-  rquickshare
+  localsend
 
   slimevr
   temurin-jre-bin-23
