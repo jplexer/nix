@@ -15,6 +15,7 @@ with pkgs; [
   android-studio
   prismlauncher
   localsend
+  cloudflare-warp
 
   slimevr
   temurin-jre-bin-23
