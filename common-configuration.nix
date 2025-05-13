@@ -69,10 +69,6 @@
 
   services.tailscale.enable = true;
 
-  services.cloudflare-warp = {
-    enable = true;
-  };
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
