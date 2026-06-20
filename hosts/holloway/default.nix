@@ -5,6 +5,7 @@
     [
       ../../modules/system.nix
       ../../modules/kde.nix
+      ../../modules/gaming.nix
       ./hardware-configuration.nix
     ];
 
