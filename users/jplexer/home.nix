@@ -41,11 +41,18 @@
     pciutils
     usbutils
     discord
+    git-credential-manager
   ];
 
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
+    extraConfig.credential= {
+      helper = "manager";
+      credentialStore = "secretservice";
+      "https://github.com".username = "jplexer";
+    };
+    
     settings.user = {
       name  = "Joshua Jun";
       email = "lets@throw.rocks";
