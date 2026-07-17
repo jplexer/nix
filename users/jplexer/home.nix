@@ -42,6 +42,11 @@
     usbutils
     discord
     git-credential-manager
+    zed-editor
+    lmstudio
+    uv
+    vlc
+    claude-code
   ];
 
   # basic configuration of git, please change to your own
@@ -58,6 +63,10 @@
       email = "lets@throw.rocks";
     };
   };
+
+  services.flatpak.packages = [
+    "com.mastermindzh.tidal-hifi"
+  ];
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

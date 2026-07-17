@@ -11,5 +11,9 @@
   environment.systemPackages = with pkgs; [
     heroic
     protonup-qt
+    prismlauncher
+    (pkgs.rpcs3.overrideAttrs (prev: {
+      cmakeFlags = prev.cmakeFlags ++ [ (lib.cmakeBool "BUILD_SHARED_LIBS" false) ];
+    }))
   ];
 }
