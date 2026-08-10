@@ -47,6 +47,10 @@
     uv
     vlc
     claude-code
+    signal-desktop
+    gitkraken
+    hexchat
+    temurin-bin
   ];
 
   # basic configuration of git, please change to your own
@@ -66,6 +70,7 @@
 
   services.flatpak.packages = [
     "com.mastermindzh.tidal-hifi"
+    "org.pipewire.Helvum"
   ];
 
   # This value determines the home Manager release that your

@@ -44,9 +44,9 @@
       theme = "agnoster";
     };
   };
-  
+
   nixpkgs.config.allowUnfree = true;
-  
+
   nix = {
     settings.experimental-features = ["nix-command" "flakes" ];
     gc = {
@@ -55,13 +55,14 @@
       options = lib.mkDefault "--delete-older-than 7d";
     };
   };
-  
+
   environment.systemPackages = with pkgs; [
     git
     helix
     appimage-run
     (chromium.override { enableWideVine = true; })
     distrobox
+    android-tools
  ];
 
   programs.direnv.enable = true;
@@ -98,7 +99,8 @@
     };
   };
 
-  programs.nix-ld.enable = true;   
+  programs.nix-ld.enable = true;
+  # Needed for Sailfish SDK
   programs.nix-ld.libraries = with pkgs; [
     alsa-lib at-spi2-atk at-spi2-core atk cairo cups curl dbus expat
     fontconfig freetype fuse3 gdk-pixbuf glib gtk3 icu libGL
@@ -113,10 +115,11 @@
     zulu8 harfbuzz zlib
     ncurses libtiff wayland
   ];
-  
+
   services.flatpak.enable = true;
   programs.ssh.startAgent = true;
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "jplexer" ];
   virtualisation.docker.enable = true;
+  users.extraGroups.adbusers.members = ["jplexer"];
 }
