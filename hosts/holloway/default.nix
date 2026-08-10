@@ -3,9 +3,9 @@
 {
   imports =
     [
-      ../../modules/system.nix
-      ../../modules/kde.nix
-      ../../modules/gaming.nix
+      ../../modules/linux/system.nix
+      ../../modules/linux/kde.nix
+      ../../modules/linux/gaming.nix
       ./hardware-configuration.nix
     ];
 
@@ -13,7 +13,7 @@
     efi.canTouchEfiVariables = true;
     systemd-boot.enable = true;
   };
-  
+
   networking.hostName = "holloway";
   networking.networkmanager.enable = true;
 
