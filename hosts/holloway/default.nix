@@ -3,6 +3,8 @@
 {
   imports =
     [
+      ../../modules/common/nix.nix
+      ../../modules/common/fonts.nix
       ../../modules/linux/system.nix
       ../../modules/linux/kde.nix
       ../../modules/linux/gaming.nix

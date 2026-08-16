@@ -1,9 +1,10 @@
-
 { config, pkgs, ... }:
 
+# Portable home-manager config, imported on both holloway (NixOS) and
+# bagley (macOS). Anything that only builds on one platform belongs in
+# ./linux.nix or ./darwin.nix instead.
 {
   home.username = "jplexer";
-  home.homeDirectory = "/home/jplexer";
 
   home.packages = with pkgs; [
     fastfetch
@@ -13,7 +14,7 @@
     xz
     unzip
     p7zip
-    
+
     ripgrep
 
     dnsutils
@@ -28,50 +29,39 @@
     gawk
     zstd
     gnupg
-    
+
     btop
-    iotop
-    iftop
-    
+
     lsof # list open files
 
-    sysstat
-    lm_sensors
-    ethtool
     pciutils
     usbutils
+
     discord
     git-credential-manager
     zed-editor
-    lmstudio
     uv
-    vlc
-    claude-code
     signal-desktop
-    gitkraken
-    hexchat
-    temurin-bin
+    pinta
+    audacity
   ];
 
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
-    extraConfig.credential= {
-      helper = "manager";
-      credentialStore = "secretservice";
-      "https://github.com".username = "jplexer";
-    };
-    
-    settings.user = {
-      name  = "Joshua Jun";
-      email = "lets@throw.rocks";
+    settings = {
+      credential = {
+        helper = "manager";
+        # credentialStore differs per platform, see ./linux.nix and ./darwin.nix
+        "https://github.com".username = "jplexer";
+      };
+
+      user = {
+        name  = "Joshua Jun";
+        email = "lets@throw.rocks";
+      };
     };
   };
-
-  services.flatpak.packages = [
-    "com.mastermindzh.tidal-hifi"
-    "org.pipewire.Helvum"
-  ];
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

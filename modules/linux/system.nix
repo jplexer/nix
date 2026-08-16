@@ -45,16 +45,9 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
-
-  nix = {
-    settings.experimental-features = ["nix-command" "flakes" ];
-    gc = {
-      automatic = lib.mkDefault true;
-      dates = lib.mkDefault "weekly";
-      options = lib.mkDefault "--delete-older-than 7d";
-    };
-  };
+  # Shared nix settings (allowUnfree, flakes, gc policy) live in
+  # modules/common/nix.nix. Only the systemd-timer schedule is Linux specific.
+  nix.gc.dates = lib.mkDefault "weekly";
 
   environment.systemPackages = with pkgs; [
     git
@@ -67,24 +60,8 @@
 
   programs.direnv.enable = true;
 
+  # The font package list is shared, see modules/common/fonts.nix.
   fonts = {
-    packages = with pkgs; [
-      # icon fonts
-      material-design-icons
-
-      # normal fonts
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-
-      # nerdfonts
-      # https://github.com/NixOS/nixpkgs/blob/nixos-unstable-small/pkgs/data/fonts/nerd-fonts/manifests/fonts.json
-      nerd-fonts.symbols-only # symbols icon only
-      nerd-fonts.fira-code
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.iosevka
-    ];
-
     # use fonts specified by user rather than default ones
     enableDefaultPackages = false;
 
