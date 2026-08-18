@@ -37,13 +37,8 @@
     pciutils
     usbutils
 
-    discord
     git-credential-manager
-    zed-editor
     uv
-    signal-desktop
-    pinta
-    audacity
   ];
 
   # basic configuration of git, please change to your own

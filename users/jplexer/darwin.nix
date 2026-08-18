@@ -5,23 +5,15 @@
 
   home.packages = with pkgs; [
     iftop
-    ghostty-bin
-    iina
-    hexfiend
-    chiri
-    tidal
-    slack
-    cyberduck
-    bartender
-    aldente
-    grandperspective
-    keka
-    zotero
   ];
 
   # git-credential-manager stores secrets in the login keychain on macOS;
   # the secretservice backend used on NixOS does not exist here.
   programs.git.settings.credential.credentialStore = "keychain";
+
+  # Was the only customisation in the hand-written ~/.zshrc that home-manager
+  # now generates.
+  home.sessionPath = [ "$HOME/.local/bin" ];
 
   # On NixOS zsh/oh-my-zsh is set up system-wide in modules/linux/system.nix.
   # nix-darwin has no ohMyZsh option, so it is configured per-user here.

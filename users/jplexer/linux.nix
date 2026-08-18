@@ -13,6 +13,11 @@
     hexchat
     temurin-bin
     claude-code
+    pinta
+    discord
+    zed-editor
+    signal-desktop
+    audacity
   ];
 
   programs.git.settings.credential.credentialStore = "secretservice";

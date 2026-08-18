@@ -17,7 +17,7 @@
       # "none" leaves manually-installed brew packages alone. Switch to
       # "uninstall" (or "zap", which also removes config) once you trust the
       # lists below to be complete -- it will then remove anything not listed.
-      cleanup = "none";
+      cleanup = "uninstall";
     };
 
     brews = [
@@ -30,7 +30,7 @@
       "claude"
       "transmit"
       "helium-browser"
-      "littlesnitch@nightly"
+      "little-snitch@nightly"
       "typewhisper"
       "docker-desktop"
       "backblaze"
@@ -46,6 +46,22 @@
       "saleae-logic"
       "steam"
       "intellij-idea"
+      "eurkey-next"
+      "shottr"
+      "ghostty"
+      "iina"
+      "hex-fiend"
+      "chiri"
+      "tidal"
+      "slack"
+      "cyberduck"
+      "grandperspective"
+      "keka"
+      "zotero"
+      "discord"
+      "zed"
+      "signal"
+      "audacity"
     ];
 
     # Mac App Store apps, needs the `mas` CLI (add "mas" to brews above).
