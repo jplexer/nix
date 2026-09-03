@@ -21,6 +21,7 @@
     };
 
     brews = [
+      "bun"
     ];
 
     casks = [

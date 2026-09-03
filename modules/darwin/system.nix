@@ -23,6 +23,8 @@
     git
     gh
     helix
+    nil
+    nixd
   ];
 
   # nix-darwin only toggles zsh integration here; oh-my-zsh is configured
