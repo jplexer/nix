@@ -29,13 +29,13 @@
       "fork"
       "claude"
       "transmit"
-      "helium-browser"
       "little-snitch@nightly"
       "typewhisper"
       "docker-desktop"
       "backblaze"
       "proton-mail-bridge"
       "proton-drive"
+      "protonvpn"
       "camo-studio"
       "ente-auth"
       "tailscale-app"
@@ -44,7 +44,6 @@
       "nrf-connect"
       "orcaslicer"
       "saleae-logic"
-      "steam"
       "intellij-idea"
       "eurkey-next"
       "shottr"
@@ -52,7 +51,6 @@
       "iina"
       "hex-fiend"
       "chiri"
-      "tidal"
       "slack"
       "cyberduck"
       "grandperspective"
@@ -62,6 +60,7 @@
       "zed"
       "signal"
       "audacity"
+      "ungoogled-chromium"
     ];
 
     # Mac App Store apps, needs the `mas` CLI (add "mas" to brews above).
