@@ -12,6 +12,5 @@
     heroic
     protonup-qt
     prismlauncher
-    rpcs3
   ];
 }

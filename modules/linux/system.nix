@@ -84,11 +84,11 @@
     libappindicator-gtk3 libdrm libglvnd libnotify libpulseaudio
     libunwind libusb1 libuuid libxkbcommon libxml2 mesa nspr nss
     openssl pango pipewire stdenv.cc.cc systemd vulkan-loader
-    xorg.libX11 xorg.libXScrnSaver xorg.libXcomposite xorg.libXcursor
-    xorg.libXdamage xorg.libXext xorg.libXfixes xorg.libXi
-    xorg.libXrandr xorg.libXrender xorg.libXtst xorg.libxcb
-    xorg.libxkbfile xorg.libxshmfence xorg.xcbutilwm xorg.xcbutilimage
-    xorg.xcbutilrenderutil xorg.xcbutilkeysyms xorg.libSM xorg.libICE
+    libx11 libxscrnsaver libxcomposite libxcursor
+    libxdamage libxext libxfixes libxi
+    libxrandr libxrender libxtst libxcb
+    libxkbfile libxshmfence libxcb-wm libxcb-image
+    libxcb-render-util libxcb-keysyms libsm libice
     zulu8 harfbuzz zlib
     ncurses libtiff wayland
   ];
