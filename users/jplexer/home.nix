@@ -41,6 +41,26 @@
     uv
   ];
 
+  programs.zsh = {
+    enable = true;
+    initContent = ''
+      # Up/Down search history for commands starting with the typed prefix.
+      # Cover both normal and application-mode terminal arrow sequences.
+      for keymap in emacs viins; do
+        bindkey -M "$keymap" '^[[A' history-beginning-search-backward
+        bindkey -M "$keymap" '^[[B' history-beginning-search-forward
+        bindkey -M "$keymap" '^[OA' history-beginning-search-backward
+        bindkey -M "$keymap" '^[OB' history-beginning-search-forward
+      done
+      unset keymap
+    '';
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;

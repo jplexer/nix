@@ -29,8 +29,7 @@
     pnpm
   ];
 
-  # nix-darwin only toggles zsh integration here; oh-my-zsh is configured
-  # through home-manager in users/jplexer/darwin.nix.
+  # The shared home-manager config manages the shell and Starship prompt.
   programs.zsh.enable = true;
   programs.direnv = {
     enable = true;

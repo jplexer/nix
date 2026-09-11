@@ -36,14 +36,8 @@
 
   programs.firefox.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    ohMyZsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "agnoster";
-    };
-  };
+  # The shared home-manager config manages the shell and Starship prompt.
+  programs.zsh.enable = true;
 
   # Shared nix settings (allowUnfree, flakes, gc policy) live in
   # modules/common/nix.nix. Only the systemd-timer schedule is Linux specific.
