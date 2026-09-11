@@ -25,6 +25,8 @@
     helix
     nil
     nixd
+    nodejs_26
+    pnpm
   ];
 
   # nix-darwin only toggles zsh integration here; oh-my-zsh is configured
