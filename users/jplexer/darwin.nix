@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.homeDirectory = "/Users/jplexer";
@@ -16,7 +16,16 @@
   home.sessionPath = [
     "$HOME/.local/bin"
     "$HOME/.bun/bin"
+    "$HOME/.docker/bin"
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
   ];
+
+  # Docker Desktop installs zsh completion files here for manual installs.
+  # Add them to fpath before home-manager runs compinit.
+  programs.zsh.initContent = lib.mkOrder 550 ''
+    if [[ -d "$HOME/.docker/completions" ]]; then
+      fpath=("$HOME/.docker/completions" $fpath)
+    fi
+  '';
 }

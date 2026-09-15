@@ -22,6 +22,7 @@
 
     brews = [
       "bun"
+      "libomp"
     ];
 
     casks = [
@@ -30,7 +31,7 @@
       "fork"
       "claude"
       "transmit"
-      "little-snitch@nightly"
+      "little-snitch"
       "typewhisper"
       "docker-desktop"
       "backblaze"
