@@ -44,13 +44,18 @@
   programs.zsh = {
     enable = true;
     initContent = ''
-      # Up/Down search history for commands starting with the typed prefix.
+      # Up/Down search history for commands starting with the typed prefix,
+      # then place the cursor at the end of the recalled command.
+      autoload -Uz history-search-end
+      zle -N history-beginning-search-backward-end history-search-end
+      zle -N history-beginning-search-forward-end history-search-end
+
       # Cover both normal and application-mode terminal arrow sequences.
       for keymap in emacs viins; do
-        bindkey -M "$keymap" '^[[A' history-beginning-search-backward
-        bindkey -M "$keymap" '^[[B' history-beginning-search-forward
-        bindkey -M "$keymap" '^[OA' history-beginning-search-backward
-        bindkey -M "$keymap" '^[OB' history-beginning-search-forward
+        bindkey -M "$keymap" '^[[A' history-beginning-search-backward-end
+        bindkey -M "$keymap" '^[[B' history-beginning-search-forward-end
+        bindkey -M "$keymap" '^[OA' history-beginning-search-backward-end
+        bindkey -M "$keymap" '^[OB' history-beginning-search-forward-end
       done
       unset keymap
     '';
