@@ -27,6 +27,7 @@
     nixd
     nodejs_26
     pnpm
+    macchina
   ];
 
   # The shared home-manager config manages the shell and Starship prompt.

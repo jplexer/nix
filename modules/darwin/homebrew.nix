@@ -33,7 +33,6 @@
       "transmit"
       "little-snitch"
       "typewhisper"
-      "docker-desktop"
       "backblaze"
       "proton-mail-bridge"
       "proton-drive"
