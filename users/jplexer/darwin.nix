@@ -5,6 +5,8 @@
 
   home.packages = with pkgs; [
     iftop
+    cargo
+    rustc
   ];
 
   # git-credential-manager stores secrets in the login keychain on macOS;

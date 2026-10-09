@@ -64,6 +64,10 @@
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
+    settings.nix_shell = {
+      symbol = "❄️ ";
+      format = "via [$symbol( \\($name\\))]($style) ";
+    };
   };
 
   # basic configuration of git, please change to your own
