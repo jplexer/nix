@@ -4,7 +4,7 @@
   users.users."jplexer" = {
     isNormalUser = true;
     description = "Joshua Jun";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "adbusers" "vboxusers" ];
     shell = pkgs.zsh;
   };
 
@@ -90,7 +90,5 @@
   services.flatpak.enable = true;
   programs.ssh.startAgent = true;
   virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "jplexer" ];
   virtualisation.docker.enable = true;
-  users.extraGroups.adbusers.members = ["jplexer"];
 }
