@@ -23,6 +23,7 @@
     brews = [
       "bun"
       "libomp"
+      "rsync"
     ];
 
     casks = [
