@@ -8,6 +8,7 @@
       ../../modules/linux/system.nix
       ../../modules/linux/kde.nix
       ../../modules/linux/gaming.nix
+      ../../modules/linux/vr.nix
       ./hardware-configuration.nix
     ];
 

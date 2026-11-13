@@ -86,6 +86,8 @@
     zulu8 harfbuzz zlib
     ncurses libtiff wayland
   ];
+  # Populate /bin and /usr/bin on demand for scripts with hardcoded paths
+  services.envfs.enable = true;
 
   services.flatpak.enable = true;
   programs.ssh.startAgent = true;
